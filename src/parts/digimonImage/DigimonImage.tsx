@@ -5,4 +5,5 @@ export default function DigimonImage(props: DigimonImageProps) {
 interface DigimonImageProps {
     id: Number;
     variant: String
+    size?: String
 }

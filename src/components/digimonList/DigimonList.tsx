@@ -1,7 +1,7 @@
 import {Anchor, Button, Col, Container, Form, ListGroup, Row, Table} from "react-bootstrap";
-import DigimonImage from "../../components/digimonImage/DigimonImage";
+import DigimonImage from "../../parts/digimonImage/DigimonImage";
 import Digimon from "../../services/dto/Digimon";
-import TypeIcon from "../../components/typeIcon/TypeIcon";
+import TypeIcon from "../../parts/typeIcon/TypeIcon";
 import {useState} from "react";
 
 export default function DigimonList(props: DigimonListProps) {

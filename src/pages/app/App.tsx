@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import Digimon from "../../services/dto/Digimon";
-import DigimonList from "../../parts/digimonList/DigimonList";
 
 function App() {
     const [data, setData] = useState([] as Digimon[]);
@@ -15,9 +14,10 @@ function App() {
 
     return (
         <div className="App">
-            <DigimonList data={data}/>
+
         </div>
     );
 }
 
+//<DigimonList data={data}/>
 export default App;
