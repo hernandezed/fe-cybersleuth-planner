@@ -33,7 +33,7 @@ export default function DigimonList(props: DigimonListProps) {
                         {
                             props.data.map(d =>
                                 <tr hidden={search !== "" && !d.name.toLowerCase().includes(search.toLowerCase())}>
-                                    <td valign={"middle"} align={"center"}><TypeIcon type={d.type}
+                                    <td valign={"middle"} align={"center"}><TypeIcon styles={{width: 20}} type={d.type}
                                                                                      attribute={d.attribute}/></td>
                                     <td valign={"middle"} align={"center"}><DigimonImage id={d.id} variant={"mini"}/>
                                     </td>

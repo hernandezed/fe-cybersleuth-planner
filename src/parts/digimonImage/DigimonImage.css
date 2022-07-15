@@ -1,0 +1,50 @@
+.portrait-type {
+    width: 20px;
+    z-index: 2;
+    position: relative;
+    left: -73px;
+    top: 63px;
+}
+
+.bordered-portrait {
+    border-style: solid;
+    border-color: #95a7c0;
+    border-radius: 100px;
+    border-width: 3px;
+}
+
+.dark {
+    border-color: #B961E5;
+}
+
+.earth {
+    border-color: #875000;
+}
+
+.electric {
+    border-color: #FFCE00;
+}
+
+.fire {
+    border-color: #E81D00;
+}
+
+.light {
+    border-color: #FFFBE5;
+}
+
+.neutral {
+    border-color: #787978;
+}
+
+.plant {
+    border-color: #00CA00;
+}
+
+.water {
+    border-color: #00A4FF;
+}
+
+.wind {
+    border-color: #00F6C3;
+}

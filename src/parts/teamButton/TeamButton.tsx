@@ -13,7 +13,7 @@ export default function TeamButton(props: Team) {
                 </Col>
             </Row>
             {
-                props.digimonIds.map(id => <DigimonImage id={id} variant={'mini'} size={'20'}/>)
+                props.digimonIds.map(id => <DigimonImage id={id} variant={'mini'}/>)
             }
         </Button>
     )
