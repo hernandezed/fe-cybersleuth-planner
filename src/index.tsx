@@ -6,6 +6,7 @@ import App from './pages/app/App';
 import reportWebVitals from './reportWebVitals';
 import Header from "./parts/header/header";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import DigimonDetails from "./pages/detail/DigimonDetails";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -15,6 +16,7 @@ root.render(
         <Header/>
         <Routes>
             <Route path="/" element={<App/>}/>
+            <Route path="/digimons/:id" element={<DigimonDetails/>}/>
         </Routes>
     </Router>
 );

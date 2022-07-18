@@ -1,5 +1,5 @@
 import './DigimonImage.css'
-import TypeIcon from "../typeIcon/TypeIcon";
+import AttributeTypeIcon from "../typeIcon/AttributeTypeIcon";
 import React from "react";
 
 export default function DigimonImage(props: DigimonImageProps) {

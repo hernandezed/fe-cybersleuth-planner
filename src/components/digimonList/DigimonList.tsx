@@ -1,12 +1,22 @@
 import {Anchor, Button, Col, Container, Form, ListGroup, Row, Table} from "react-bootstrap";
 import DigimonImage from "../../parts/digimonImage/DigimonImage";
 import Digimon from "../../services/dto/Digimon";
-import TypeIcon from "../../parts/typeIcon/TypeIcon";
-import {useState} from "react";
+import AttributeTypeIcon from "../../parts/typeIcon/AttributeTypeIcon";
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import DigimonService from "../../services/DigimonService";
 
 export default function DigimonList(props: DigimonListProps) {
     const [search, setSearch] = useState("")
+    const navigate = useNavigate()
+    const [data, setData] = useState([] as Digimon[]);
+    const service = new DigimonService();
 
+    useEffect(() => {
+        service.getAll().then(digimons => {
+            setData(digimons);
+        }).catch(err => console.log(err))
+    }, [])
 
     return (
         <Container>
@@ -31,10 +41,13 @@ export default function DigimonList(props: DigimonListProps) {
                         </thead>
                         <tbody>
                         {
-                            props.data.map(d =>
-                                <tr hidden={search !== "" && !d.name.toLowerCase().includes(search.toLowerCase())}>
-                                    <td valign={"middle"} align={"center"}><TypeIcon styles={{width: 20}} type={d.type}
-                                                                                     attribute={d.attribute}/></td>
+                            data.map(d =>
+                                <tr onClick={() => navigate("/digimons/" + d.id)}
+                                    hidden={search !== "" && !d.name.toLowerCase().includes(search.toLowerCase())}>
+                                    <td valign={"middle"} align={"center"}><AttributeTypeIcon styles={{width: 20}}
+                                                                                              type={d.type}
+                                                                                              attribute={d.attribute}/>
+                                    </td>
                                     <td valign={"middle"} align={"center"}><DigimonImage id={d.id} variant={"mini"}/>
                                     </td>
                                     <td valign={"middle"} align={"center"}>{d.name}</td>

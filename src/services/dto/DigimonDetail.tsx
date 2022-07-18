@@ -1,6 +1,7 @@
 export default interface DigimonDetail {
     id: Number
     name: String
+    skill: Skill
     stage: String
     type: String
     attribute: String
@@ -58,4 +59,9 @@ interface Requirement {
 interface Degeneration {
     id: Number
     name: String
+}
+
+interface Skill {
+    name: String
+    description: String
 }
