@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import App from './pages/app/App';
+import App from './pages/app';
 import reportWebVitals from './reportWebVitals';
-import Header from "./parts/header/header";
+import Header from "./parts/header";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import DigimonDetails from "./pages/detail/DigimonDetails";
+import Detail from "./pages/detail";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import DigimonList from "./components/digimonList";
+import Digimons from "./pages/digimons";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -18,7 +20,8 @@ root.render(
         <QueryClientProvider client={new QueryClient()}>
             <Routes>
                 <Route path="/" element={<App/>}/>
-                <Route path="/digimons/:id" element={<DigimonDetails/>}/>
+                <Route path="/digimons" element={<Digimons/>}/>
+                <Route path="/digimons/:idParam" element={<Detail/>}/>
             </Routes>
         </QueryClientProvider>
     </Router>

@@ -1,5 +1,5 @@
 import {Button, Col, Row} from "react-bootstrap";
-import DigimonImage from "../digimonImage/DigimonImage";
+import DigimonImage from "../digimonImage";
 import Team from "../../services/dto/Team";
 
 export default function TeamButton(props: Team) {

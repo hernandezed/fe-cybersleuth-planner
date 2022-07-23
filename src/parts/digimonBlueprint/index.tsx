@@ -1,6 +1,6 @@
 import Digimon from "../../services/dto/Digimon";
 import {Button} from "react-bootstrap";
-import DigimonImage from "../digimonImage/DigimonImage";
+import DigimonImage from "../digimonImage";
 
 export default function DigimonBuild(props: DigimonBuildProps) {
     return (

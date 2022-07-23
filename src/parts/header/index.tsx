@@ -4,7 +4,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 
 function Header() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" className={"px-4"}>
+        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" className={"px-4 mb-2"}>
             <LinkContainer to="/">
                 <Navbar.Brand>
                     <img src="logo.png" width="40" height="40" className="d-inline-block align-top" alt="Cybersleuth"/>

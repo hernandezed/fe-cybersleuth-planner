@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import DigimonList from "../../components/digimonList/DigimonList";
+import './index.css';
+import DigimonList from "../../components/digimonList";
 
 function App() {
     return (
@@ -10,5 +10,5 @@ function App() {
     );
 }
 
-//<DigimonList data={data}/>
+//<Index data={data}/>
 export default App;

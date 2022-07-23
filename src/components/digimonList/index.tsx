@@ -1,20 +1,23 @@
 import {Col, Container, Form, Row, Table} from "react-bootstrap";
-import DigimonImage from "../../parts/digimonImage/DigimonImage";
-import AttributeTypeIcon from "../../parts/typeIcon/AttributeTypeIcon";
+import DigimonImage from "../../parts/digimonImage";
+import AttributeTypeIcon from "../../parts/typeIcon";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import DigimonService from "../../services/DigimonService";
 import {useQuery} from "@tanstack/react-query";
-import Loading from "../../parts/loading/Loading";
+import Loading from "../../parts/loading";
+import Message from "../../parts/message";
 
 export default function DigimonList() {
     const [search, setSearch] = useState("")
     const navigate = useNavigate()
     const service = new DigimonService();
-    const {data, error, isError, isLoading} = useQuery(['digimons'], () => service.fetchDigimons())
+    const {data, isError, isLoading} = useQuery(['digimons'], () => service.fetchDigimons())
 
     if (isLoading) {
         return <Loading/>
+    } else if (isError) {
+        return <Message message={"Cannot load Digimon List"}/>
     } else {
         return (
             <Container>
