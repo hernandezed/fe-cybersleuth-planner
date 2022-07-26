@@ -1,4 +1,4 @@
-import Team from "../../services/dto/Team";
+import TeamDto from "../../services/dto/TeamDto";
 import TeamButton from "../../parts/teamButton";
 import {Button} from "react-bootstrap";
 
@@ -14,5 +14,5 @@ export default function TeamButtonGroup(props: TeamButtonGroupProps) {
 }
 
 interface TeamButtonGroupProps {
-    teams: Team[]
+    teams: TeamDto[]
 }

@@ -5,7 +5,6 @@ import DigimonList from "../../components/digimonList";
 function App() {
     return (
         <div className="App">
-            <DigimonList/>
         </div>
     );
 }

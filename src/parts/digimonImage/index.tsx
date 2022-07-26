@@ -1,6 +1,6 @@
 import './index.css'
-import AttributeTypeIcon from "../typeIcon";
-import React from "react";
+import React, {CSSProperties, MouseEventHandler, ReactNode} from "react";
+import {Button} from "react-bootstrap";
 
 export default function DigimonImage(props: DigimonImageProps) {
 
@@ -12,12 +12,23 @@ export default function DigimonImage(props: DigimonImageProps) {
         }
     }
 
+    if (props.onClick) {
+        return <Button style={{margin: 2, width: 150, padding:10, height: 120}}>
+            <div>
+                <img className={className} style={{...props.style}}
+                     src={require("../../assets/" + props.variant + "s/" + props.id + ".png")}/>
+            </div>
+            {props.children}
+        </Button>
+    } else {
+        return (<span>
+            <img className={className} style={{...props.style}}
+                 src={require("../../assets/" + props.variant + "s/" + props.id + ".png")}/>
+                {props.children}
+        </span>
+        );
+    }
 
-    return (
-        <div style={{marginBottom: 10, alignItems: 'center'}}>
-            <img className={className} src={require("../../assets/" + props.variant + "s/" + props.id + ".png")}/>
-        </div>
-    );
 }
 
 interface DigimonImageProps {
@@ -26,4 +37,7 @@ interface DigimonImageProps {
     attribute?: String
     variant: String
     bordered?: Boolean
+    style?: CSSProperties
+    onClick?: MouseEventHandler | undefined
+    children?: ReactNode
 }

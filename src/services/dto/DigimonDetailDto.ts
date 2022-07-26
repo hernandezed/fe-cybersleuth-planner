@@ -1,19 +1,19 @@
-export default interface DigimonDetail {
+export default interface DigimonDetailDto {
     id: Number
     name: String
-    skill: Skill
+    skill: SkillDto
     stage: String
     type: String
     attribute: String
     memory: Number
     slots: Number
-    evolvesFrom: Degeneration[]
-    evolvesTo: Evolution[]
-    learnAttacks: LearnAttack[]
-    stats: Map<String, Stats>
+    evolvesFrom: DegenerationDto[]
+    evolvesTo: EvolutionDto[]
+    learnAttacks: LearnAttackDto[]
+    stats: Map<String, StatsDto>
 }
 
-interface Stats {
+interface StatsDto {
     hp: number,
     sp: number,
     attack: number,
@@ -22,12 +22,12 @@ interface Stats {
     speed: number
 }
 
-interface LearnAttack {
-    attack: AttackDetail
+interface LearnAttackDto {
+    attack: AttackDetailDto
     at: Number
 }
 
-interface AttackDetail {
+interface AttackDetailDto {
     id: Number
     name: String
     attribute: String,
@@ -37,13 +37,13 @@ interface AttackDetail {
     inheritable: Boolean
 }
 
-interface Evolution {
+interface EvolutionDto {
     id: Number
     name: String
-    requirement: Requirement
+    requirement: RequirementDto
 }
 
-interface Requirement {
+interface RequirementDto {
     level?: Number
     hp?: Number
     sp?: Number
@@ -56,12 +56,12 @@ interface Requirement {
     dna?: String
 }
 
-interface Degeneration {
+interface DegenerationDto {
     id: Number
     name: String
 }
 
-interface Skill {
+interface SkillDto {
     name: String
     description: String
 }

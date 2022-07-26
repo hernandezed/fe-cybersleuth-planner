@@ -1,4 +1,4 @@
-export default interface Digimon {
+export default interface DigimonDto {
     id: Number,
     name: String,
     stage: String,

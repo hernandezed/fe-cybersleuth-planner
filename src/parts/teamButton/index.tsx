@@ -1,8 +1,8 @@
 import {Button, Col, Row} from "react-bootstrap";
 import DigimonImage from "../digimonImage";
-import Team from "../../services/dto/Team";
+import TeamDto from "../../services/dto/TeamDto";
 
-export default function TeamButton(props: Team) {
+export default function TeamButton(props: TeamDto) {
     return (
         <Button style={{width: '100%'}}>
             <Row>

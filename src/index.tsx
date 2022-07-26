@@ -6,10 +6,11 @@ import App from './pages/app';
 import reportWebVitals from './reportWebVitals';
 import Header from "./parts/header";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Detail from "./pages/detail";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
-import DigimonList from "./components/digimonList";
 import Digimons from "./pages/digimons";
+import Digimon from "./pages/digimon";
+import Attacks from "./pages/attacks";
+import Attack from "./pages/attack";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -21,7 +22,9 @@ root.render(
             <Routes>
                 <Route path="/" element={<App/>}/>
                 <Route path="/digimons" element={<Digimons/>}/>
-                <Route path="/digimons/:idParam" element={<Detail/>}/>
+                <Route path="/digimons/:idParam" element={<Digimon/>}/>
+                <Route path="/attacks" element={<Attacks/>}/>
+                <Route path="/attacks/:idParam" element={<Attack/>}/>
             </Routes>
         </QueryClientProvider>
     </Router>
