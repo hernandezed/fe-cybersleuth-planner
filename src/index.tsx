@@ -11,6 +11,7 @@ import Digimons from "./pages/digimons";
 import Digimon from "./pages/digimon";
 import Attacks from "./pages/attacks";
 import Attack from "./pages/attack";
+import DigimonBuilder from "./pages/digimonBuilder";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -25,6 +26,7 @@ root.render(
                 <Route path="/digimons/:idParam" element={<Digimon/>}/>
                 <Route path="/attacks" element={<Attacks/>}/>
                 <Route path="/attacks/:idParam" element={<Attack/>}/>
+                <Route path="/digimon-builder" element={<DigimonBuilder/>}/>
             </Routes>
         </QueryClientProvider>
     </Router>

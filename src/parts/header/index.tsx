@@ -20,8 +20,8 @@ function Header() {
                     <LinkContainer to="/attacks">
                         <Nav.Link>Attacks</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/team-planner">
-                        <Nav.Link>Team Planner</Nav.Link>
+                    <LinkContainer to={"/digimon-builder"}>
+                        <Nav.Link>Digimon Builder</Nav.Link>
                     </LinkContainer>
                 </Nav>
             </Navbar.Collapse>
